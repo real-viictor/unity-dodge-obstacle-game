@@ -24,8 +24,8 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        xInput = Input.GetAxis("Horizontal") * playerSpeed;
-        zInput = Input.GetAxis("Vertical") * playerSpeed;
+        xInput = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
+        zInput = Input.GetAxis("Vertical") * playerSpeed * Time.deltaTime;
         transform.Translate(xInput, 0, zInput);
     }
 }
